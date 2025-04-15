@@ -1,0 +1,1041 @@
+
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --accent-color: gray;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  
+/* Hidden Menu */
+.menu-bar {
+  position: absolute ;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  width: 200px;
+  height: auto;
+  background-color: grey;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+.menu-bar ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.menu-bar li {
+  margin-bottom: 15px;
+}
+
+.menu-bar a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.toggle-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}  
+
+
+/* Vertical Container */
+.vertical-container {
+display: flex;
+flex-direction: column;
+width: 100%; /* Allow container to expand horizontally */
+}
+
+/* Home Section */
+#home {
+display: flex; /* Use Flexbox for horizontal layout */
+flex-direction: row; /* Arrange children horizontally (side by side) */
+align-items: center; /* Vertically center the content */
+justify-content: space-between; /* Add spacing between left and right sections */
+min-height: 100vh; /* Ensure it takes up the full viewport height */
+padding: 50px;
+}
+
+@media (max-width: 768px) {
+#home {
+  flex-direction: column; /* Stack sections vertically on smaller screens */
+}
+
+.left-section,
+.right-section {
+  width: 100%; /* Make each section take up full width */
+  height: 100%;
+}
+}
+
+/* General Sections */
+.sections {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 50px;
+width: 100%; /* Full width */
+}
+
+/* Left Section */
+.left-section {
+width: 40%; /* Adjust width as needed */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.portfolio-title {
+font-size: 50px;
+font-family: "Edu AU VIC WA NT Hand", serif;
+margin-bottom: 150px;
+}
+
+.portfolio-title .color-1 {
+color:  black;
+}
+
+.portfolio-title .color-2 {
+color: grey;
+}
+
+/* Right Section */
+.right-section {
+width: 55%; /* Adjust width as needed */
+height: 100vh;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+background-color: grey;
+}
+
+.profile-nav {
+display: flex;
+align-items: center; /* Vertically align items */
+margin-bottom: 10px;
+margin-top: -10px;
+}
+
+.brand {
+font-family: "Edu AU VIC WA NT Hand", serif; /* Custom font for branding */
+font-size: 24px; /* Adjust font size as needed */
+font-weight: bold;
+color: black; /* Use accent color for branding */
+margin-right: 30px; /* Add spacing between brand and nav-pills */
+font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  /* Adjust Right Section for Mobile */
+  .right-section {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Auto height for better responsiveness */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  /* Stack Profile Nav Items Vertically */
+  .profile-nav {
+    flex-direction: column; /* Stack brand and nav-pills vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .brand {
+    margin-right: 0; /* Remove horizontal spacing */
+    margin-bottom: 10px; /* Add spacing below the brand */
+  }
+
+  /* Adjust Profile Nav Links */
+  .profile-nav ul a {
+    margin-left: 0; /* Remove left margin */
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  /* Adjust Nav Pills */
+  .nav-pills .nav-item {
+    margin-left: 0; /* Remove left margin */
+    margin-bottom: 10px; /* Add spacing between nav items */
+  }
+
+  /* Profile Box */
+  .profile-box {
+    flex-direction: column; /* Stack profile info and picture vertically */
+    align-items: center; /* Center-align items */
+    gap: 20px; /* Reduce gap for mobile */
+  }
+
+  .profile-info {
+    margin-right: 0; /* Remove horizontal spacing */
+    text-align: center; /* Center-align text */
+  }
+
+  .profile-info h1 {
+    font-size: 1.8rem; /* Reduce font size for mobile */
+  }
+
+  .profile-picture {
+    width: 150px; /* Reduce image size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Contact Link */
+  .contact-link {
+    margin-right: 0; /* Remove horizontal spacing */
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  /* About Section Title */
+  .section-title hr {
+    width: 50%; /* Full-width line for mobile */
+  }
+
+  .about-section p {
+    margin-left: 0; /* Remove left margin */
+    font-size: 14px; /* Smaller font size for mobile */
+    width: 20%;
+  }
+
+  /* Skills Container */
+  .skills-container {
+    flex-direction: column; /* Stack skills vertically */
+    gap: 20px; /* Reduce gap for mobile */
+  }
+
+  /* Individual Skill */
+  .skill {
+    width: 100%; /* Full width for mobile */
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center-align content */
+  }
+}
+
+.profile-nav ul a {
+color: white;
+margin-left: 50px;
+font-size: 10px;
+text-decoration: none;
+}
+
+.nav-pills .nav-item {
+display: inline-block;
+margin-left: 100px;
+}
+
+.nav-pills .nav-link {
+background-color: transparent;
+color: white;
+border: none;
+margin: 0;
+padding: 6px;
+border-radius: 30px; /* Pill-shaped buttons */
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link.active {
+background-color:black;/* Black background on hover/active */
+color: #ffffff; /* White text on hover/active */
+}
+
+/* Profile Box */
+.profile-box {
+display: flex;
+align-items: center;
+margin-bottom: 30px;
+gap: 80px;
+}
+
+.profile-info {
+margin-right: 20px;
+}
+
+.profile-info small {
+font-size: 1rem; /* Fixed unit */
+margin-bottom: 5px;
+
+}
+
+.profile-info h1 {
+font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+font-size: 2.3rem;
+line-height: 1.2;
+color: white;
+font-weight: bolder;
+}
+
+.profile-info h1 span {
+font-size: 2.3rem;
+display: block;
+font-weight: bolder;
+color: white;
+}
+
+.profile-picture {
+width: 250px;
+height: 300px;
+border-radius: 10px;
+}
+
+.contact-link {
+display: block;
+margin-top: 10px;
+font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+font-weight: bold;
+color: #ffffff;
+padding: 8px 2px;
+border-radius: 4px;
+transition: background-color 0.3s ease;
+margin-right: 60px;
+text-decoration: underline;
+}
+
+.contact-link:hover {
+background-color: black;
+}
+
+/*about Section Title */
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.about-section .section-title h2{
+  font-size: 30px;
+  margin-bottom: 2px;
+  color: white;
+ }
+.section-title hr {
+  width: 500px;
+  height: 1.5px;
+  background-color: white;
+  border: none;
+  margin: 15px ;
+}
+
+.about-section p {
+  margin-left: 80px;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  justify-content: space-between; /* Distribute skills evenly */
+  align-items: center; /* Align items vertically */
+  margin-top: rem;
+  gap: 3rem; /* Add spacing between skills */
+}
+
+/* Individual Skill */
+.skill {
+  text-align: center; /* Center-align content */
+  padding:0;
+  width: 60%; /* Ensure equal width for all skills */
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+
+/* Skill Title */
+.skill h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  color: #ffffff; /* White text */
+}
+
+/* Skill Experience */
+.skill p {
+  font-size: 1rem;
+  color: #ffff; /* Light gray text */
+  text-decoration: underline;
+}
+
+/* About Me Section */
+#about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: var(--bg-color); /* Use root variable for consistency */
+}
+
+#about .section-title h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+#about .section-title hr {
+  width: 300px;
+  height: 2px;
+  background-color: var(--accent-color);
+  border: none;
+  margin-bottom: 40px;
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.about-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.about-content strong {
+  color: var(--accent-color); /* Highlight important keywords */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #about .section-title h2 {
+    font-size: 36px;
+  }
+
+  #about .section-title hr {
+    width: 200px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+}
+
+/* Education Section */ 
+#education {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 50px;
+}
+
+
+#education .section-title {
+  font-size: 46px;
+  margin-bottom: 100px; 
+}
+
+#education .containerr {
+  width: 100%;
+  text-align: center;
+  display: flex; /* Use Flexbox for vertical layout */
+  align-items: center; /* Center content horizontally */
+  gap: 50px;
+}
+
+/* Base State for Rows */
+.education-section .row {
+  opacity: 0; /* Start invisible */
+  transform: translateY(50px); /* Start slightly below the viewport */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+/* Active State for Rows */
+.education-section .row.active {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide up into view */
+}
+
+
+/* Card Styling */
+.card {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 300px; /* Adjust card width for horizontal layout */
+  width: 100%; /* Ensure cards take up full width on smaller screens */
+  flex: 1; /* Allow cards to grow/shrink as needed */
+  margin: 0 auto; /* Center cards if there's only one per row */
+  margin-left: 20px;  
+}
+
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+} 
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}  
+
+/* Tablet Layout (768px <= width < 1024px) */
+@media (max-width: 1024px) {
+  #education {
+    padding: 30px; /* Reduce padding for tablets */
+  }
+
+  #education .section-title {
+    font-size: 36px; /* Reduce font size for tablets */
+    margin-bottom: 60px; /* Adjust spacing */
+  }
+
+  #education .containerr {
+    gap: 30px; /* Reduce spacing between cards */
+  }
+
+  .card {
+    max-width: 250px; /* Slightly reduce card width for tablets */
+  }
+}
+
+/* Mobile Layout (width < 768px) */
+@media (max-width: 768px) {
+  #education {
+    padding: 20px; /* Further reduce padding for mobile */
+    margin-left: 70px;
+  }
+
+  #education .section-title {
+    font-size: 28px; /* Further reduce font size for mobile */
+    margin-bottom: 40px; /* Adjust spacing */
+  }
+
+  #education .containerr {
+    gap: 20px; /* Further reduce spacing between cards */
+    justify-content: center; /* Center cards horizontally */
+  }
+
+  .row {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center; /* Center cards horizontally */
+  }
+
+  .card {
+    max-width: 100%; /* Make cards full-width on smaller screens */
+    margin-bottom: 20px; /* Add spacing between cards */
+    margin-left: 0; /* Remove left margin for mobile */
+  }
+}
+
+/* Previous Projects Section */
+#previous-projects {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+align-items: center;
+justify-content: center;
+padding: 50px;
+background-color: white; /* Dark background for contrast */
+background-attachment: fixed; /* Parallax effect */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+#previous-projects .containerr {
+width: 100%;
+text-align: center;
+display: flex; /* Use Flexbox for vertical layout */
+align-items: center; /* Center content horizontally */
+gap: 10px;
+}
+
+/* Section Title */
+#previous-projects .section-title {
+font-size: 46px;
+margin-bottom: 20px;
+}
+
+
+/* Project Highlights Container */
+.project-highlights {
+display: flex;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+gap: 10px; /* Spacing between highlights */
+justify-content: center;
+margin-left: 5px;
+width: 100%; /* Ensure cards take up full width on smaller screens */
+}
+
+/* Base State for Highlight Elements */
+.project-highlights .highlight {
+  opacity: 0; /* Start invisible */
+  transform: translateY(50px); /* Start slightly below the viewport */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+  width: 50%;
+}
+
+/* Active State for Highlight Elements */
+.project-highlights .highlight.active {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide up into view */
+}
+
+/* Highlight Image */
+.highlight-image {
+width: 200px;
+height: 200px;
+margin-top: 10px;
+border-radius: 10px;
+}
+
+/* Highlight Content */
+.highlight-content {
+padding: 20px;
+text-align: center;
+}
+
+.highlight-content h3 {
+font-size: 24px;
+margin-bottom: 10px;
+color: black; /* White text */
+}
+
+.highlight-content p {
+font-size: 16px;
+line-height: 1.5;
+margin-bottom: 15px;
+color: black; /* Light gray text */
+}
+
+.project-link {
+display: block;
+padding: 8px 16px;
+background-color: #000000; /* Green button */
+color: #ffffff; /* White text */
+text-decoration: none;
+border-radius: 4px;
+transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+background-image: linear-gradient(to right,#4f4e4b, #ece8e0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.previous-projects, .highlight, .project-highlights, .project-link, .highlight-content, .highlight-image {
+  max-width: 100%; /* Make highlights full-width on smaller screens */
+}
+}
+
+
+/* Resume Section Styling */
+#resume {
+  background-color: #f9f9f9;
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-titlee{
+  text-align:center;
+  margin-bottom: 2rem;
+}
+
+.section-titlee h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-titlee p {
+  font-size: 1rem;
+
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.resume-container {
+  display: flex;
+  justify-content: center;
+}
+
+.resume-split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.resume-left,
+.resume-right {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resume-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.resume-item {
+  margin-bottom: 1.5rem;
+}
+
+.resume-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.resume-item h5 {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.resume-item p {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.resume-item ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.resume-item ul li {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+/* Hover Effect for Resume Items */
+.resume-item:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-split {
+    grid-template-columns: 1fr; /* Stack sections vertically on smaller screens */
+  }
+
+  .resume-left,
+  .resume-right {
+    padding: 1.5rem;
+  }
+}
+
+/* Base State for Animated Elements */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Active State for Animated Elements */
+.animate-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* General Styling */
+.services {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-titlee{
+  text-align:center;
+  margin-bottom: 2rem;
+}
+
+.section-titleee h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color:black;
+}
+
+.section-titleee p {
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+/* Service Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Responsive grid */
+  gap: 2rem;
+}
+
+/* Service Item Styling */
+.service-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.icon {
+  color: black; /* Icons in black */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Title and Description Styling */
+.service-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr; /* One column on mobile */
+  }
+}
+
+/* General Styling */
+.contact {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title-1{
+  text-align:center;
+  margin-bottom: 2rem;
+}
+.section-title-1 h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.section-title-1 p {
+  font-size: 1rem;
+  text-align: center;
+  color: grey;
+  margin-bottom: 2rem;
+}
+
+/* Row Styling */
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Left Column: Contact Information */
+.col-lg-5 {
+  width: 100%;
+  max-width: 40%; /* Adjust width for desktop */
+}
+
+.info-wrap {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.info-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.info-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Right Column: Contact Form */
+.col-lg-7 {
+  width: 100%;
+  max-width: 60%; /* Adjust width for desktop */
+}
+
+.php-email-form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  
+}
+
+.php-email-form label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.php-email-form input,
+.php-email-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.php-email-form textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #555;
+}
+
+.loading,
+.error-message,
+.sent-message {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.loading {
+  color: #333;
+}
+
+.error-message {
+  color: red;
+}
+
+.sent-message {
+  color: green;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .col-lg-5,
+  .col-lg-7 {
+    max-width: 100%; /* Full width on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack columns vertically on mobile */
+  }
+
+  .info-wrap,
+  .php-email-form {
+    padding: 1rem;
+  }
+
+  .submit-btn {
+    width: 100%; /* Full-width button on mobile */
+  }
+}
+
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  margin-left:400px;
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .credits {
+  margin-top: 4px;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer, .copyright, .credits {
+    text-align: center;
+    margin:0;
+  }
+}
